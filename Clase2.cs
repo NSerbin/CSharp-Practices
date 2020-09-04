@@ -60,7 +60,7 @@ namespace Ex5
         public static void Main(string[] args)
         {
             int suma = 20 + 5;
-            int resultado = suma / 6;
+            int resultado = suma % 6;
             Console.WriteLine("El resultado final es: " + resultado);
         }
     }
