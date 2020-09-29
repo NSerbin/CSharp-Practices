@@ -18,28 +18,15 @@ namespace EDDClase3
             do
             {
                 Console.WriteLine("Ingrese su Identificador numérico: ");
-                val1 = int.Parse(Console.ReadLine());
-                if (id != val1)
-                {
-                    Console.WriteLine("Ingrese nuevamente su Identificador numerico: ");
-                }
-            }
-            while (id != val1);
+                val1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingrese su contraseña: ");
+                val2 = Convert.ToInt32(Console.ReadLine());
+            } while (id != val1 || pwd != val2);
 
             Console.WriteLine("Identificador Aceptado.");
-
-            do
-            {
-                Console.WriteLine("Ingrese su contraseña: ");
-                val2 = int.Parse(Console.ReadLine());
-                if (pwd != val2)
-                {
-                    Console.WriteLine("Ingrese nuevamente su contraseña: ");
-                }
-            }
-            while (pwd != val2);
-
             Console.WriteLine("Contraseña Aceptada.");
+            Console.ReadKey();
+
         }
     }
 }
@@ -62,10 +49,11 @@ namespace EDDClase3
             while (contador > 0)
             {
                 numero = numero / 10;
-                contador = contador + 1;
+                contador = contador++;
             }
 
-            Console.WriteLine("El numero de digitos es: " + contador);
+            Console.WriteLine("El numero {0} tiene {1} digitos", numero, contador);
+            Console.ReadKey();
         }
     }
 }
@@ -85,6 +73,7 @@ namespace EDDClase3
             for (int x = 0; x <= 10; x++)
             {
                 Console.WriteLine(numero + " * " + x + "=" + (x + numero));
+                Console.ReadKey();
             }
         }
     }
@@ -103,6 +92,7 @@ namespace EDDClase3
                 for (int x = 0; ; x++)
                 {
                     Console.WriteLine(x);
+                    Console.ReadKey();
                 };
             }
         }
@@ -123,8 +113,8 @@ namespace EDDClase3
                 for (; ; )
                 {
                     Console.Write("Hola");
-
-            }
+                    Console.ReadKey();
+                }
         }
     }
     }
@@ -147,7 +137,9 @@ namespace EDDClase3
             c = a++;
             b = b * 5;
             a = a * 2;
-            Console.WriteLine("Los resultados son" + a + b + c);
+            Console.WriteLine("Los resultados son" + a + " "+ b + " " + c);
+            Console.ReadKey();
+
         }
     }
     }
@@ -173,7 +165,8 @@ namespace EDDClase3
             ++c;
             a *= b;
             Console.WriteLine("Los resultados son" + a + b + c);
-        }
+            Console.ReadKey();
+            }
     }
     }
 
@@ -194,11 +187,13 @@ namespace EDDClase3
             if (vocal == "a" || vocal == "e" || vocal == "i" || vocal == "o" || vocal == "u");
             {
                 Console.WriteLine(vocal + "Es una vocal");
-            }
+                Console.ReadKey();
+                }
             else
             {
                 Console.WriteLine(vocal + "NO Es una vocal");
-            }
+                Console.ReadKey();
+                }
 
         }
     }
@@ -217,13 +212,18 @@ namespace EDDClase3
     {
         public static void Main(string[] args)
         {
-            while (passwd != passwd2)
+                Console.WriteLine("Ingrese su usuario:");
+                string user = Console.ReadLine();
+                while (passwd != passwd2)
             {
                 Console.WriteLine("Ingrese su contraseña: ");
                 int passwd = int.Parse(Console.ReadLine());
+                Console.ReadKey();
                 Console.WriteLine("Ingrese nuevamente su contraseña: ");
                 int passwd2 = int.Parse(Console.ReadLine());
-            }
+                Console.ReadKey();
+                Console.WriteLine("Contraseña incorrecta, ingrese nuevamente ");
+                }
         }
     }
     }
@@ -245,10 +245,12 @@ namespace EDDClase3
             if (user == "Martín");
                 {
                     Console.WriteLine("Hola", user);
+                    Console.ReadKey();
                 }
             else
                 {
                     Console.WriteLine("No te conozco", user);
+                    Console.ReadKey();
                 }
 
             }
